@@ -6,6 +6,7 @@ build-debug.log
 .project
 .vscode
 *.gz
+*.zip
 *.pyc
 *.komodoproject
 /nbproject/private/
