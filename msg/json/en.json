@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2020-05-08 21:52:53.846563",
+		"lastupdated": "2020-08-19 21:23:51.118859",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -436,11 +436,11 @@
 	"VARIABLES_SET_ARRAY_SPEC_ONE": "[]",
 	"VARIABLES_SET_ARRAY_SPEC_TWO": "[][]",
 	"VARIABLES_SET_ARRAY_SPEC_THREE": "[][][]",
-	"VARIABLES_SET_TYPE_INT": "integer",
+	"VARIABLES_SET_TYPE_INT": "int",
 	"VARIABLES_SET_TYPE_UNSIGNED_INT": "unsigned int",
-	"VARIABLES_SET_TYPE_FLOAT": "real number(float)",
-	"VARIABLES_SET_TYPE_DOUBLE": "real number(double)",
-	"VARIABLES_SET_TYPE_CHAR": "character",
+	"VARIABLES_SET_TYPE_FLOAT": "float",
+	"VARIABLES_SET_TYPE_DOUBLE": "double",
+	"VARIABLES_SET_TYPE_CHAR": "char",
 	"VARIABLES_SET_ITERATION_NORMAL": "*",
 	"VARIABLES_SET_ITERATION_DOUBLE": "**",
 	"VARIABLES_SET_ITERATION_TRIPLE": "***",
