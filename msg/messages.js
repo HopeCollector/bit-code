@@ -939,15 +939,15 @@ Blockly.Msg.VARIABLES_SET_ARRAY_SPEC_TWO = "[][]";
 /// variables_set_array_spec_three
 Blockly.Msg.VARIABLES_SET_ARRAY_SPEC_THREE = "[][][]";
 /// variables_set_type_int
-Blockly.Msg.VARIABLES_SET_TYPE_INT = "integer";
+Blockly.Msg.VARIABLES_SET_TYPE_INT = "int";
 /// variables_set_type_unsigned_int
 Blockly.Msg.VARIABLES_SET_TYPE_UNSIGNED_INT= "unsigned int";
 /// variables_set_type_float
-Blockly.Msg.VARIABLES_SET_TYPE_FLOAT = "real number(float)";
+Blockly.Msg.VARIABLES_SET_TYPE_FLOAT = "float";
 /// variables_set_type_double
-Blockly.Msg.VARIABLES_SET_TYPE_DOUBLE = "real number(double)";
+Blockly.Msg.VARIABLES_SET_TYPE_DOUBLE = "double";
 /// variables_set_type_char
-Blockly.Msg.VARIABLES_SET_TYPE_CHAR= "character";
+Blockly.Msg.VARIABLES_SET_TYPE_CHAR= "char";
 /// variables_set_iteration_normal
 Blockly.Msg.VARIABLES_SET_ITERATION_NORMAL = "*";
 /// variables_set_iteration_double
