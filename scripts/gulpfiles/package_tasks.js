@@ -292,6 +292,14 @@ function packagePHP() {
 };
 
 /**
+ * This task wraps php_compressed.js into a UMD module.
+ * @example import 'blockly/php';
+ */
+function packageCpp() {
+  return packageGenerator('cpp_compressed.js', 'cpp.js', 'Blockly.Cpp');
+};
+
+/**
  * This task wraps each of the msg/js/* files into a UMD module.
  * @example import * as En from 'blockly/msg/en';
  */
@@ -311,7 +319,7 @@ function packageLocales() {
 
 /**
  * This task creates a UMD bundle of Blockly which includes the Blockly
- * core files, the built-in blocks, the JavaScript code generator and the
+ * core files, the built-in blocks, the Cpp code generator and the
  * English localization files.
  * @example <script src="https://unpkg.com/blockly/blockly.min.js"></script>
  */
@@ -320,7 +328,8 @@ function packageUMDBundle() {
     'blockly_compressed.js',
     'msg/js/en.js',
     'blocks_compressed.js',
-    'javascript_compressed.js'
+    //'javascript_compressed.js'
+    'cpp_compressed.js'
   ];
   return gulp.src(srcs)
     .pipe(gulp.concat('blockly.min.js'))
@@ -365,7 +374,7 @@ function packageReadme() {
  * The bundled declaration file is referenced in package.json in the types property.
  */
 function packageDTS() {
-  return gulp.src('./typings/blockly.d.ts')
+  return gulp.src('./typings/blockly.d.ts', {allowEmpty: true})
     .pipe(gulp.dest(`${packageDistribution}`));
 };
 
@@ -380,12 +389,13 @@ const package = gulp.parallel(
   packageNodeCore,
   packageBlockly,
   packageBlocklyNode,
-  packageBlocks,
-  packageJavascript,
-  packagePython,
-  packageLua,
-  packageDart,
-  packagePHP,
+  // packageBlocks,
+  // packageJavascript,
+  // packagePython,
+  // packageLua,
+  // packageDart,
+  // packagePHP,
+  packageCpp,
   packageLocales,
   packageMedia,
   packageUMDBundle,

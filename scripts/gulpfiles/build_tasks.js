@@ -233,7 +233,7 @@ function buildGenerator(language, namespace) {
 goog.provide('Blockly.Generator');
 goog.provide('Blockly.utils.global');
 goog.provide('Blockly.utils.string');`;
-  return gulp.src([`generators/${language}.js`, `generators/${language}/*.js`], {base: './'})
+  return gulp.src([`generators/${language}.js`, `generators/${language}/*.js`], {base: './', allowEmpty: true})
     .pipe(stripApacheLicense())
     // Add Blockly.Generator and Blockly.utils.string to be compatible with the compiler.
     .pipe(gulp.replace(`goog.provide('Blockly.${namespace}');`,
@@ -251,8 +251,8 @@ goog.provide('Blockly.utils.string');`;
 };
 
 /**
- * This task builds the javascript generator.
- *     javascript_compressed.js
+ * This task builds the cpp generator.
+ *     cpp_compressed.js
  */
 function buildCpp() {
   return buildGenerator('cpp', 'cpp');
@@ -260,11 +260,7 @@ function buildCpp() {
 
 /**
  * This tasks builds all the generators:
- *     javascript_compressed.js
- *     python_compressed.js
- *     php_compressed.js
- *     lua_compressed.js
- *     dart_compressed.js
+ *     cpp_compressed.js
  */
 const buildGenerators = gulp.parallel(
   buildCpp
